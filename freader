@@ -1,0 +1,18 @@
+
+#include <iostream>
+#include <fstream>
+#include <string>
+using namespace std;
+
+int main () {
+  cout<<"This function/method/procedure "<<__func__<<" "<<endl<<endl;
+  cout<<"source code file name: /n";
+  cout<<__FILE__<<endl<<endl;
+  fstream File(__FILE__);
+  string text;
+
+    while (getline (File, text)) {
+    // Output the text from the source file
+    cout << "\t"<<text;
+    }
+}
